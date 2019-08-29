@@ -1,6 +1,5 @@
 package com.epam.numbers;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -25,8 +24,8 @@ public class MagicNumbers {
 
 			if (!fileName.equalsIgnoreCase("Exit")) {
 
-				// validate if the gif file is a real gif file by its magic number
-				if (validateAllowedExtensions(new File(fileName)).equalsIgnoreCase("GIF")) {
+				// validate if the GIF file is a real GIF file by its magic number
+				if (validateAllowedExtensions(fileName).equalsIgnoreCase(".GIF")) {
 					String MagicNumberGIF = validateMagicNumber(fileName, 0 , 6);
 					if(MagicNumberGIF.equalsIgnoreCase("474946383761")||MagicNumberGIF.equalsIgnoreCase("474946383961")) {
 						System.out.println("The GIF file"+fileName+" has a valid Magic Number: "+MagicNumberGIF);
@@ -37,7 +36,7 @@ public class MagicNumbers {
 
 				}
 				// validate if the txt file is a real txt file by its magic number
-				if (validateAllowedExtensions(new File(fileName)).equalsIgnoreCase("TXT")) {
+				if (validateAllowedExtensions(fileName).equalsIgnoreCase(".TXT")) {
 					String MagicNumberTXT = validateMagicNumber(fileName, 0 , 4);
 					if(MagicNumberTXT.equalsIgnoreCase("3C69")) {
 						System.out.println("The TXT file"+fileName+" has a valid Magic Number: "+MagicNumberTXT);
@@ -49,8 +48,8 @@ public class MagicNumbers {
 				}
 				
 				// validate if the JPG file is a real JPG file by its magic number
-				if (validateAllowedExtensions(new File(fileName)).equalsIgnoreCase("JPG")) {
-					String MagicNumberJPG = validateMagicNumber(fileName, 0 , 4);
+				if (validateAllowedExtensions(fileName).equalsIgnoreCase(".JPG")) {
+					String MagicNumberJPG = validateMagicNumber(fileName, 0 , 2);
 					if(MagicNumberJPG.equalsIgnoreCase("FFD8")) {
 						System.out.println("The JPG file"+fileName+" has a valid Magic Number: "+MagicNumberJPG);
 					}else {
@@ -60,7 +59,7 @@ public class MagicNumbers {
 
 				}
 				
-				System.out.println("Extension not suported!!!!");
+				//System.out.println("Extension not suported!!!!");
 
 			}
 
@@ -82,15 +81,15 @@ public class MagicNumbers {
 		//Get substring/extension from the string
 		String extension = fileName.substring(lastIndex).toUpperCase();
 
-		if (extension.equalsIgnoreCase("GIF")) {
+		if (extension.equalsIgnoreCase(".GIF")) {
 			return extension;
 		}
 
-		if (extension.equalsIgnoreCase("JPG")) {
+		if (extension.equalsIgnoreCase(".JPG")) {
 			return extension;
 		}
 
-		if (extension.equalsIgnoreCase("TXT")) {
+		if (extension.equalsIgnoreCase(".TXT")) {
 			return extension;
 		}
 
