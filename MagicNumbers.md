@@ -33,6 +33,11 @@ If you never heard of magic numbers, don't worry. They are good resources to stu
 3. https://en.wikipedia.org/wiki/File_format#Magic_number
 4. https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files
 
+## How to Test:
+
+1. https://www.onlinehexeditor.com/#
+
+
 ## How is time counted?
 
 Reading time and learning time doesn't count. Drawing time also doesn't, if you did a drawing. Coding time does. Please let us know when you will start coding (date and time) so we can actually watch your progress as it happens.
